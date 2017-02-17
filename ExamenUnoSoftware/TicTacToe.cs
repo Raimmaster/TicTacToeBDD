@@ -34,7 +34,7 @@ namespace ExamenUnoSoftware.Spec
         public void SetSymbolsForEachPlayer()
         {
             var players = gameManager.GetPlayers();
-            char[] symbols = {'X', '0'};
+            string[] symbols = {"X", "0"};
             int firstSymbolIndex = _randomizer.GetRandom(0, 2);
             int secondSymbolIndex = firstSymbolIndex == 1 ? 0 : 1;
             players[0].SetSymbol(symbols[firstSymbolIndex]);
@@ -56,6 +56,16 @@ namespace ExamenUnoSoftware.Spec
             string posChar = board.GetCharAtPos(rowPos, columnPos);
 
             return posChar.Equals(" ");
+        }
+
+        public bool CheckWin()
+        {
+            string currentSymbol = CurrentPlayer.symbol;
+            bool rowWin = board.CheckRowWin(currentSymbol);
+            bool columnWin = board.CheckColumnWin(currentSymbol);
+            bool diagonalWin = board.CheckDiagonalWin(currentSymbol);
+
+            return rowWin || columnWin || diagonalWin;
         }
     }
 }

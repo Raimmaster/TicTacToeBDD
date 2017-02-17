@@ -31,7 +31,7 @@ Scenario: Validate game victory
 	| X | X | X | 
 	| X | 0 |   |
 	| 0 | 0 | X |
-	Then Player X has won the match
+	Then Player 'X' has won the match
 	And victory should be written to the file
 
 Scenario: Validate draw game

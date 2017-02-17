@@ -47,5 +47,68 @@ namespace ExamenUnoSoftware
         {
             return board[rowPos, columnPos];
         }
+
+        public bool CheckRowWin(string currentSymbol)
+        {
+            bool wRow = false;
+            for (int i = 0; i < rowsCount; i++)
+            {
+                int matchCount = 0;
+                for (int k = 0; k < columnsCount; ++k)
+                {
+                    if (board[i, k].Equals(currentSymbol) && !board[i, k].Equals(" "))
+                    {
+                        ++matchCount;
+                    }
+                }
+
+                if (matchCount == 3)
+                {
+                    return true;
+                }
+            }
+
+            return wRow;
+        }
+
+        public bool CheckColumnWin(string currentSymbol)
+        {
+            bool wCol = false;
+            for (int i = 0; i < columnsCount; i++)
+            {
+                int matchCount = 0;
+                for (int k = 0; k < rowsCount; ++k)
+                {
+                    if (board[k, i].Equals(currentSymbol) && !board[k, i].Equals(" "))
+                    {
+                        ++matchCount;
+                    }
+                }
+
+                if (matchCount == 3)
+                {
+                    return true;
+                }
+            }
+
+            return wCol;
+        }
+
+        public bool CheckDiagonalWin(string currentSymbol)
+        {
+            int m = 0, n = columnsCount - 1;
+            bool diag1 = true;
+            bool diag2 = true;
+            for (int i = 0; i < rowsCount; i++)
+            {
+                if (!board[i, m++].Equals(currentSymbol))
+                    diag1 = false;
+
+                if (!board[i, n--].Equals(currentSymbol))
+                    diag2 = false;
+            }
+
+            return diag1 || diag2;
+        }
     }
 }

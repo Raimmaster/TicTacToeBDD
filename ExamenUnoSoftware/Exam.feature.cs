@@ -184,7 +184,7 @@ this.ScenarioSetup(scenarioInfo);
 #line 29
  testRunner.Given("this next board", ((string)(null)), table2, "Given ");
 #line 34
- testRunner.Then("Player X has won the match", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+ testRunner.Then("Player \'X\' has won the match", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line 35
  testRunner.And("victory should be written to the file", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden

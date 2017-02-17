@@ -72,6 +72,9 @@
     <Compile Include="..\EmptySlotSteps.cs">
       <Link>EmptySlotSteps.cs</Link>
     </Compile>
+    <Compile Include="..\GameVictorySteps.cs">
+      <Link>GameVictorySteps.cs</Link>
+    </Compile>
     <Compile Include="Board.cs" />
     <Compile Include="ChoosePlayerOneSteps.cs" />
     <Compile Include="Exam.feature.cs">
