@@ -75,8 +75,10 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Exam.feature</DependentUpon>
     </Compile>
+    <Compile Include="IGameManager.cs" />
     <Compile Include="NewGameSteps.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="TicTacToe.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

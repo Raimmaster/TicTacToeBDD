@@ -4,7 +4,7 @@ using TechTalk.SpecFlow;
 namespace ExamenUnoSoftware
 {
     [Binding]
-    public class TIC_TAC_TOESteps
+    public class ChoosePlayerSymbols
     {
         [Given(@"'(.*)' and '(.*)' are both players")]
         public void GivenAndAreBothPlayers(string p0, string p1)

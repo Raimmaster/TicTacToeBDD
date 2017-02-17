@@ -76,7 +76,7 @@ namespace ExamenUnoSoftware
 #line 4
 this.ScenarioSetup(scenarioInfo);
 #line 5
- testRunner.Given("\'Ricardo\' and \'Nick\'", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+ testRunner.Given("\'Raim\' and \'Nick\'", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line 6
  testRunner.When("I start the match", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 7
@@ -110,7 +110,7 @@ this.ScenarioSetup(scenarioInfo);
 #line 13
 this.ScenarioSetup(scenarioInfo);
 #line 14
- testRunner.Given("\'Ricardo\' and \'Luis\' are both players", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+ testRunner.Given("\'Raim\' and \'Nick\' are both players", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line 15
  testRunner.Then("one will be chosen randomly to use symbol X or 0", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden

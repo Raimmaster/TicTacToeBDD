@@ -2,7 +2,7 @@
 Feature: TIC-TAC-TOE
 
 Scenario: Start a new game
-	Given 'Ricardo' and 'Nick'
+	Given 'Raim' and 'Nick'
 	When I start the match
 	Then both players should be asked for their names
 
@@ -11,7 +11,7 @@ Scenario: Choose player one
 	Then one will be chosen randomly to be player one
 
 Scenario: Choose symbols for players
-	Given 'Ricardo' and 'Luis' are both players
+	Given 'Raim' and 'Nick' are both players
 	Then one will be chosen randomly to use symbol X or 0
 
 Scenario: Choose empty slot
