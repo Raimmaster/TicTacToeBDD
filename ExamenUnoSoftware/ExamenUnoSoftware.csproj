@@ -75,6 +75,9 @@
     <Compile Include="..\GameVictorySteps.cs">
       <Link>GameVictorySteps.cs</Link>
     </Compile>
+    <Compile Include="..\ValidateDrawGameSteps.cs">
+      <Link>ValidateDrawGameSteps.cs</Link>
+    </Compile>
     <Compile Include="Board.cs" />
     <Compile Include="ChoosePlayerOneSteps.cs" />
     <Compile Include="Exam.feature.cs">

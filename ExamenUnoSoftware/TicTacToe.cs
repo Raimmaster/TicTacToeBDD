@@ -82,5 +82,10 @@ namespace ExamenUnoSoftware.Spec
 
             return win;
         }
+
+        public bool CheckBoardIsFull()
+        {
+            return board.isFull();
+        }
     }
 }

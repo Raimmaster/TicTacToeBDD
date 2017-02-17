@@ -110,5 +110,42 @@ namespace ExamenUnoSoftware
 
             return diag1 || diag2;
         }
+
+        public bool CheckFullWin(string currentSymbol)
+        {
+            return CheckRowWin(currentSymbol) || CheckColumnWin(currentSymbol) || CheckDiagonalWin(currentSymbol);
+        }
+
+        public bool isFull()
+        {
+            bool winOne = CheckFullWin("X");
+            bool WinTwo = CheckFullWin("0");
+
+            if ((winOne || WinTwo))
+            {
+                return false;
+            }
+
+            bool isFullBoard = true;
+
+            for (int row = 0; row < rowsCount; ++row)
+            {
+                for (int column = 0; column < columnsCount; ++column)
+                {
+                    if (board[row, column].Equals(" "))
+                    {
+                        isFullBoard = false;
+                        break;
+                    }
+                }
+
+                if (!isFullBoard)
+                {
+                    break;
+                }
+            }
+
+            return isFullBoard;
+        }
     }
 }
