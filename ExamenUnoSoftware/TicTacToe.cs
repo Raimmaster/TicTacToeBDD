@@ -9,12 +9,20 @@ namespace ExamenUnoSoftware.Spec
         private IGameManager gameManager;
         private IRandomizer _randomizer;
         private Board board;
+        private IFileWriter _fileWriter;
         public Player CurrentPlayer { get; set; }
 
         public TicTacToe(IGameManager gameManager, IRandomizer randomizerObject)
         {
             this.gameManager = gameManager;
             this._randomizer = randomizerObject;
+        }
+
+        public TicTacToe(IGameManager gameManagerObject, IRandomizer randomizerObject, IFileWriter fileWriter)
+        {
+            this.gameManager = gameManagerObject;
+            this._randomizer = randomizerObject;
+            this._fileWriter = fileWriter;
         }
 
         public void SetPlayers(string playerOneName, string playerTwoName)
@@ -65,7 +73,14 @@ namespace ExamenUnoSoftware.Spec
             bool columnWin = board.CheckColumnWin(currentSymbol);
             bool diagonalWin = board.CheckDiagonalWin(currentSymbol);
 
-            return rowWin || columnWin || diagonalWin;
+            bool win = rowWin || columnWin || diagonalWin;
+
+            if (win)
+            {
+                _fileWriter.WriteVictory(CurrentPlayer.name);
+            }
+
+            return win;
         }
     }
 }

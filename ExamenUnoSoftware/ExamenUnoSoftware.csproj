@@ -82,6 +82,7 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Exam.feature</DependentUpon>
     </Compile>
+    <Compile Include="IFileWriter.cs" />
     <Compile Include="IGameManager.cs" />
     <Compile Include="IRandomizer.cs" />
     <Compile Include="NewGameSteps.cs" />

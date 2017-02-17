@@ -11,20 +11,22 @@ namespace ExamenUnoSoftware
     public class GameVictorySteps
     {
         private Mock<IGameManager> _gameManager = new Mock<IGameManager>();
+        private Mock<IFileWriter> _fileWriter = new Mock<IFileWriter>();
         private TicTacToe _game;
         private bool _currentPlayerHasWon;
 
         [Given(@"this next board")]
         public void GivenThisNextBoard(Table table)
         {
-            _game = new TicTacToe(_gameManager.Object, null);
+            _game = new TicTacToe(_gameManager.Object, null, _fileWriter.Object);
+
             var board = new Board();
             board.SetFromTable(table);
             _game.setBoard(board);
-            initMatch();
+            _initMatch();
         }
 
-        private void initMatch()
+        private void _initMatch()
         {
             _gameManager.Setup(x => x.AddPlayer(It.IsAny<string>()));
             var players = new List<Player>();
@@ -46,7 +48,7 @@ namespace ExamenUnoSoftware
         [Then(@"victory should be written to the file")]
         public void ThenVictoryShouldBeWrittenToTheFile()
         {
-            Assert.IsTrue(true);
+            _fileWriter.Verify(x => x.WriteVictory(It.IsAny<string>()), Times.Once);
         }
     }
 }
