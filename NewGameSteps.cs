@@ -1,9 +1,8 @@
 ﻿using System;
 using Moq;
 using TechTalk.SpecFlow;
-using Microsoft.VisualStudio.TestTools.UnitTesting;
 
-namespace ExamenUnoSoftware.Spec
+namespace ExamenUnoSoftware
 {
     [Binding]
     public class NewGameSteps
@@ -30,7 +29,6 @@ namespace ExamenUnoSoftware.Spec
         public void ThenBothPlayersShouldBeAskedForTheirNames()
         {
             int playerCount = 2;
-            Assert.AreEqual(playerCount, 2);
             //_gameManager.Verify(i => i.addPlayer(It.IsAny<string>()), Times.AtLeast(playerCount));
         }
     }
