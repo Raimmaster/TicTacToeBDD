@@ -8,6 +8,7 @@ namespace ExamenUnoSoftware.Spec
     {
         private IGameManager gameManager;
         private IRandomizer _randomizer;
+        private Board board;
         public Player CurrentPlayer { get; set; }
 
         public TicTacToe(IGameManager gameManager, IRandomizer randomizerObject)
@@ -43,6 +44,18 @@ namespace ExamenUnoSoftware.Spec
         public List<Player> GetPlayers()
         {
             return gameManager.GetPlayers();
+        }
+
+        public void setBoard(Board board)
+        {
+            this.board = board;
+        }
+
+        public bool isValidMove(int rowPos, int columnPos)
+        {
+            string posChar = board.GetCharAtPos(rowPos, columnPos);
+
+            return posChar.Equals(" ");
         }
     }
 }

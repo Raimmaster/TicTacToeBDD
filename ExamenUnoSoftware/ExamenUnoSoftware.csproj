@@ -69,6 +69,10 @@
     <Compile Include="..\ChoosePlayerSymbols.cs">
       <Link>ChoosePlayerSymbols.cs</Link>
     </Compile>
+    <Compile Include="..\EmptySlotSteps.cs">
+      <Link>EmptySlotSteps.cs</Link>
+    </Compile>
+    <Compile Include="Board.cs" />
     <Compile Include="ChoosePlayerOneSteps.cs" />
     <Compile Include="Exam.feature.cs">
       <AutoGen>True</AutoGen>

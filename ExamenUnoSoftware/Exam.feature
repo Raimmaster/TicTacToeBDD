@@ -16,7 +16,7 @@ Scenario: Choose symbols for players
 
 Scenario: Choose empty slot
 	Given the next board
-	|C1 |C2 |C3 |
+	|C0 |C1 |C2 |
 	| X | X |   | 
 	| X | 0 |   |
 	| 0 | 0 | X | 
@@ -26,8 +26,8 @@ Scenario: Choose empty slot
 	Then it should be an invalid move
 
 Scenario: Validate game victory
-	Given the next board
-	| C1|C2 |C3 |
+	Given this next board
+	|C0 |C1 |C2 |
 	| X | X | X | 
 	| X | 0 |   |
 	| 0 | 0 | X |
@@ -35,8 +35,8 @@ Scenario: Validate game victory
 	And victory should be written to the file
 
 Scenario: Validate draw game
-	Given the next board
-	| C1|C2 |C3 |
+	Given this next full board
+	|C0 |C1 |C2 |
 	| X | 0 | 0 | 
 	| 0 | X | X |
 	| 0 | X | 0 |

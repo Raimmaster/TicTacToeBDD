@@ -127,9 +127,9 @@ this.ScenarioSetup(scenarioInfo);
 this.ScenarioSetup(scenarioInfo);
 #line hidden
             TechTalk.SpecFlow.Table table1 = new TechTalk.SpecFlow.Table(new string[] {
+                        "C0",
                         "C1",
-                        "C2",
-                        "C3"});
+                        "C2"});
             table1.AddRow(new string[] {
                         "X",
                         "X",
@@ -166,9 +166,9 @@ this.ScenarioSetup(scenarioInfo);
 this.ScenarioSetup(scenarioInfo);
 #line hidden
             TechTalk.SpecFlow.Table table2 = new TechTalk.SpecFlow.Table(new string[] {
+                        "C0",
                         "C1",
-                        "C2",
-                        "C3"});
+                        "C2"});
             table2.AddRow(new string[] {
                         "X",
                         "X",
@@ -182,7 +182,7 @@ this.ScenarioSetup(scenarioInfo);
                         "0",
                         "X"});
 #line 29
- testRunner.Given("the next board", ((string)(null)), table2, "Given ");
+ testRunner.Given("this next board", ((string)(null)), table2, "Given ");
 #line 34
  testRunner.Then("Player X has won the match", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line 35
@@ -201,9 +201,9 @@ this.ScenarioSetup(scenarioInfo);
 this.ScenarioSetup(scenarioInfo);
 #line hidden
             TechTalk.SpecFlow.Table table3 = new TechTalk.SpecFlow.Table(new string[] {
+                        "C0",
                         "C1",
-                        "C2",
-                        "C3"});
+                        "C2"});
             table3.AddRow(new string[] {
                         "X",
                         "0",
@@ -217,7 +217,7 @@ this.ScenarioSetup(scenarioInfo);
                         "X",
                         "0"});
 #line 38
- testRunner.Given("the next board", ((string)(null)), table3, "Given ");
+ testRunner.Given("this next full board", ((string)(null)), table3, "Given ");
 #line 43
  testRunner.Then("the match is drawed", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line 44
