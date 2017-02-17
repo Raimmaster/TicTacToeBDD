@@ -75,6 +75,9 @@
     <Compile Include="..\GameVictorySteps.cs">
       <Link>GameVictorySteps.cs</Link>
     </Compile>
+    <Compile Include="..\RankingSteps.cs">
+      <Link>RankingSteps.cs</Link>
+    </Compile>
     <Compile Include="..\ValidateDrawGameSteps.cs">
       <Link>ValidateDrawGameSteps.cs</Link>
     </Compile>
@@ -88,9 +91,11 @@
     <Compile Include="IFileWriter.cs" />
     <Compile Include="IGameManager.cs" />
     <Compile Include="IRandomizer.cs" />
+    <Compile Include="Matches.cs" />
     <Compile Include="NewGameSteps.cs" />
     <Compile Include="Player.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RankingPlayer.cs" />
     <Compile Include="TicTacToe.cs" />
   </ItemGroup>
   <ItemGroup>

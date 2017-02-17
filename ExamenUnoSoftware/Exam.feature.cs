@@ -238,13 +238,13 @@ this.ScenarioSetup(scenarioInfo);
             TechTalk.SpecFlow.Table table4 = new TechTalk.SpecFlow.Table(new string[] {
                         "PlayerName"});
             table4.AddRow(new string[] {
-                        "Ricardo"});
+                        "Raim"});
             table4.AddRow(new string[] {
-                        "Kevin"});
+                        "Nick"});
             table4.AddRow(new string[] {
-                        "Luis"});
+                        "Isaula"});
             table4.AddRow(new string[] {
-                        "Ricardo"});
+                        "Raim"});
             table4.AddRow(new string[] {
                         "Jacobo"});
             table4.AddRow(new string[] {
@@ -252,39 +252,39 @@ this.ScenarioSetup(scenarioInfo);
             table4.AddRow(new string[] {
                         "Jacobo"});
             table4.AddRow(new string[] {
-                        "Maynor"});
+                        "Lucas"});
             table4.AddRow(new string[] {
-                        "Ricardo"});
+                        "Raim"});
             table4.AddRow(new string[] {
-                        "Ricardo"});
+                        "Raim"});
             table4.AddRow(new string[] {
-                        "Luis"});
+                        "Isaula"});
             table4.AddRow(new string[] {
-                        "Luis"});
+                        "Isaula"});
             table4.AddRow(new string[] {
-                        "Kevin"});
+                        "Nick"});
             table4.AddRow(new string[] {
                         "Rafael"});
             table4.AddRow(new string[] {
-                        "Brandom"});
+                        "Daniel"});
 #line 47
  testRunner.Given("the follow game table", ((string)(null)), table4, "Given ");
 #line hidden
             TechTalk.SpecFlow.Table table5 = new TechTalk.SpecFlow.Table(new string[] {
                         "Position",
                         "PlayerName",
-                        "MatchWon"});
+                        "MatchesWon"});
             table5.AddRow(new string[] {
                         "1",
-                        "Ricardo",
+                        "Raim",
                         "4"});
             table5.AddRow(new string[] {
                         "2",
-                        "Luis",
+                        "Isaula",
                         "3"});
             table5.AddRow(new string[] {
                         "3",
-                        "Kevin",
+                        "Nick",
                         "2"});
             table5.AddRow(new string[] {
                         "4",

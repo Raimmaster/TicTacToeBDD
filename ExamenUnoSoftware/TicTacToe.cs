@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 using Moq;
 
 namespace ExamenUnoSoftware.Spec
@@ -86,6 +87,55 @@ namespace ExamenUnoSoftware.Spec
         public bool CheckBoardIsFull()
         {
             return board.isFull();
+        }
+
+        public List<RankingPlayer> GetRankingFromList(List<Matches> matches)
+        {
+            var gameRanking = new List<RankingPlayer>();
+            foreach (var playerRecord in matches)
+            {
+                int playerIndex = RankingContainsPlayer(playerRecord.PlayerName, gameRanking);
+                if (playerIndex > -1)
+                {
+                    gameRanking[playerIndex].MatchesWon++;  
+                }
+                else
+                {
+                    gameRanking.Add(new RankingPlayer {
+                        PlayerName = playerRecord.PlayerName,
+                        MatchesWon = 1,
+                        Position = 1});
+                }
+            }
+            
+            gameRanking.Sort((x, y) =>
+                x.MatchesWon.CompareTo(y.MatchesWon));
+
+            var newList = gameRanking.OrderByDescending(x => x.MatchesWon).ToList();
+            gameRanking = newList;
+            setPositionsInGameRanking(gameRanking);
+            return gameRanking;
+        }
+
+        private void setPositionsInGameRanking(List<RankingPlayer> gameRanking)
+        {
+            for (int i = 0; i < gameRanking.Count; ++i)
+            {
+                gameRanking[i].Position = i + 1;
+            }
+        }
+
+        private int RankingContainsPlayer(string playerRecordPlayerName, List<RankingPlayer> gameRanking)
+        {
+            for (int i = 0; i < gameRanking.Count; ++i)
+            {
+                if (playerRecordPlayerName.Equals(gameRanking[i].PlayerName))
+                {
+                    return i;
+                }
+            }
+
+            return -1;
         }
     }
 }

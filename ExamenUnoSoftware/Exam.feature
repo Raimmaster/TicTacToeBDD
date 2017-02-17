@@ -46,26 +46,26 @@ Scenario: Validate draw game
 Scenario: Show ranking table
 	Given the follow game table
 	| PlayerName |
-	| Ricardo    |
-	| Kevin      |
-	| Luis       |
-	| Ricardo    |
-	| Jacobo     |
-	| Nexer      |
-	| Jacobo     |
-	| Maynor     |
-	| Ricardo    |
-	| Ricardo    |
-	| Luis       |
-	| Luis       |
-	| Kevin      |
-	| Rafael     |
-	| Brandom    |
+	| Raim		|
+	| Nick      |
+	| Isaula    |
+	| Raim		|
+	| Jacobo    |
+	| Nexer     |
+	| Jacobo    |
+	| Lucas     |
+	| Raim		|
+	| Raim		|
+	| Isaula    |
+	| Isaula    |
+	| Nick      |
+	| Rafael    |
+	| Daniel    |
 	Then the ranking table should look like
-	| Position | PlayerName | MatchWon |
-	| 1        | Ricardo    | 4        |
-	| 2        | Luis       | 3        |
-	| 3        | Kevin      | 2        |
-	| 4        | Jacobo     | 2        |
-	| 5        | Nexer      | 1        |
+	| Position | PlayerName | MatchesWon |
+	| 1        | Raim		| 4			 |
+	| 2        | Isaula     | 3			 |
+	| 3        | Nick       | 2			 |
+	| 4        | Jacobo     | 2			 |
+	| 5        | Nexer      | 1			 |
 
