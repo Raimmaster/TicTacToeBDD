@@ -1,0 +1,1 @@
+﻿#error (70:1): expected: #EOF, #TableRow, #StepLine, #TagLine, #ScenarioLine, #ScenarioOutlineLine, #Comment, #Empty, got '0'
