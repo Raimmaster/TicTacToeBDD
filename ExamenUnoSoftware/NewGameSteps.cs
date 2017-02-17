@@ -24,9 +24,9 @@ namespace ExamenUnoSoftware.Spec
         [When(@"I start the match")]
         public void WhenIStartTheMatch()
         {
-            game = new TicTacToe(_gameManager.Object);
+            game = new TicTacToe(_gameManager.Object, null);
             _gameManager.Setup(x => x.AddPlayer(It.IsAny<string>()));
-            game.init(_playerOneName, _playerTwoName);
+            game.setPlayers(_playerOneName, _playerTwoName);
         }
 
         [Then(@"both players should be asked for their names")]
