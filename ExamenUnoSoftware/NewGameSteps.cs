@@ -26,7 +26,7 @@ namespace ExamenUnoSoftware.Spec
         {
             game = new TicTacToe(_gameManager.Object, null);
             _gameManager.Setup(x => x.AddPlayer(It.IsAny<string>()));
-            game.setPlayers(_playerOneName, _playerTwoName);
+            game.SetPlayers(_playerOneName, _playerTwoName);
         }
 
         [Then(@"both players should be asked for their names")]

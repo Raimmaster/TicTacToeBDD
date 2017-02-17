@@ -1,4 +1,6 @@
-﻿using Moq;
+﻿using System;
+using System.Collections.Generic;
+using Moq;
 
 namespace ExamenUnoSoftware.Spec
 {
@@ -14,7 +16,7 @@ namespace ExamenUnoSoftware.Spec
             this._randomizer = randomizerObject;
         }
 
-        public void setPlayers(string playerOneName, string playerTwoName)
+        public void SetPlayers(string playerOneName, string playerTwoName)
         {
             if(!string.IsNullOrEmpty(playerOneName))
                 gameManager.AddPlayer(playerOneName);
@@ -23,9 +25,24 @@ namespace ExamenUnoSoftware.Spec
                 gameManager.AddPlayer(playerTwoName);
         }
 
-        public void setInitialPlayer()
+        public void SetInitialPlayer()
         {
             CurrentPlayer = gameManager.GetPlayers()[_randomizer.GetRandom(0, 2)];
+        }
+
+        public void SetSymbolsForEachPlayer()
+        {
+            var players = gameManager.GetPlayers();
+            char[] symbols = {'X', '0'};
+            int firstSymbolIndex = _randomizer.GetRandom(0, 2);
+            int secondSymbolIndex = firstSymbolIndex == 1 ? 0 : 1;
+            players[0].SetSymbol(symbols[firstSymbolIndex]);
+            players[1].SetSymbol(symbols[secondSymbolIndex]);
+        }
+
+        public List<Player> GetPlayers()
+        {
+            return gameManager.GetPlayers();
         }
     }
 }
